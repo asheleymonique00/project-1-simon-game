@@ -9,7 +9,80 @@ h1 {
     display: block;
 }
 
-h2 {
+h3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#outercircle {
+    background: oldlace;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    border-style: solid;
+    border-width: 10px;
+    margin: auto;   
+}
+
+#button1 {
+    background: red;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 250px 0 0 0;
+    border-style: solid;
+}
+
+#button2 {
+    background:green;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 250px 0 0 ;
+    left: 50%;
+
+}
+
+#button3 {
+    background:yellow;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 0 0 250px;
+    top: 50%;
+}
+
+#button4 {
+    background: blue;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    border-radius: 0 0 250px 0;
+    top: 50%;
+    left: 50%;
+}
+
+#innercircle {
+    background: silver;
+    text-align: center;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    border-style: solid;
+    border-width: 10px;
+    margin: auto; 
+    top: 25%;
 }

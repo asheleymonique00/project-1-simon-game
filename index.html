@@ -5,31 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Play Simon!</title>
     <link href="style.css" rel="stylesheet">
+
+    <audio id="clip1">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+    </audio>
+    <audio id="clip2">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+    </audio>
+    <audio id="clip3">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+    </audio>
+    <audio id="clip4">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+    </audio>
 </head>
 <body>
    <header>
-       <div id="header">
-           <h1>Simon!</h1>           
+        <h1>Simon!</h1>         
+        <div id="header">
+            <div id="instructions">
+                <h3>Instructions</h3>
+                <p>Click the flashing colored buttons to test your memory.</p>
+                <p>See if you can get the highest score.</p>            
+            </div>
+            <div id="score">
+                <h3>Score: </h3>
+            </div>
         </div>
-        
-        <div id="instructions">
-            <h3>Instructions</h3>
-            <p>Click the flashing colored buttons to test your memory. See if you can get the highest score.</p>            
+    </header> 
+    <div id="outercircle">
+        <div id="button1"></div>
+        <div id="button2"></div>
+        <div id="button3"></div>
+        <div id="button4"></div>
+        <div id="innercircle">
+            <div id="simon">SIMON!</div>
+            <button id="start">Start</button>
         </div>
-        <div id="score">
-            <h3>Score: </h3>
-        </div>
-   </header> 
-   <div id="outercircle">
-       <div id="button1">Red</div>
-       <div id="button2">Green</div>
-       <div id="button3">Yellow</div>
-       <div id="button4">Blue</div>
-       <div id="innercircle">
-           <div id="simon">SIMON!</div>
-           <button id="start">Start</button>
-       </div>
-   </div>
+    </div>
 
    <script src="js/simongame.js"></script>
 </body>
