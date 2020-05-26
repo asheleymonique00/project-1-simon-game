@@ -29,5 +29,5 @@ Gold:
 - JS to reset game and keep score
 
 Wireframe:
-![ project1wireframe]( project1wireframe.png)
+![ project1wireframe](project1wireframe.pdf)
 
