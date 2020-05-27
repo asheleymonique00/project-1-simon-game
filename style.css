@@ -1,11 +1,11 @@
 body {
-    background: lightgray;
+    background-image: url(https://images.pexels.com/photos/3847498/pexels-photo-3847498.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 }
 
 h1 {
     text-align: center;
-    font-family: cursive;
-    font-size: 55px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
     display: block;
 }
 
@@ -15,13 +15,13 @@ h1 {
 } */
 
 h3 {
-    font-family: cursive;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
 }
 
 p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
 }
 
 #header {
