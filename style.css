@@ -83,7 +83,7 @@ p {
 }
 
 #innercircle {
-    background: silver;
+    background: #aaa9ad;
     text-align: center;
     border-radius: 50%;
     height: 250px;
