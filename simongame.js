@@ -16,8 +16,9 @@ const blue = document.querySelector("button4");
 const startButton = document.querySelector("#start");
 const resetButton = document.querySelector("#reset");
 
+const roundStart
+
 startButton.addEventListener('click', (event), function() {
-    if (on || win) {
-        play();
+    roundStart();
     }
-}))
+});
