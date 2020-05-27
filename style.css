@@ -9,10 +9,10 @@ h1 {
     display: block;
 }
 
-/* h2 {
-    background: black;
+h2 {
+    font-weight: bolder;
     
-} */
+}
 
 h3 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -98,6 +98,7 @@ p {
 
 #simon {
     margin: 40px;
+    
 }
 #start {
     border-radius: 50%;
