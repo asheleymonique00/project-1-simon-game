@@ -41,6 +41,9 @@ p {
     /* border-width: 5px; */
     margin: auto;     
 }
+/* .active {
+    background: white;
+} */
 
 #button1 {
     background: red;
