@@ -31,7 +31,7 @@ p {
 }
 
 #outercircle {
-    background: black;
+    /* background: white; */
     /* border-width: thick; */
     border-radius: 50px;
     height: 500px;
@@ -39,11 +39,18 @@ p {
     position: relative;
     /* border: 10px solid black; */
     /* border-width: 5px; */
-    margin: auto;     
+    margin: auto;
+    cursor: pointer;     
 }
-/* .active {
+
+.button:hover {
+    box-shadow: inset 15px red;
+    box-sizing: border-box;
+}
+
+.active {
     background: white;
-} */
+}
 
 #button1 {
     background: red;
@@ -51,7 +58,7 @@ p {
     height: 250px;
     width: 250px;
     border-radius: 40px 0 0 0;
-    border: 10px solid black;
+    border: 5px solid black;
 
 }
 
@@ -62,7 +69,7 @@ p {
     width: 250px;
     border-radius: 0 40px 0 0 ;
     left: 50%;
-    border: 10px outset black;
+    border: 5px outset black;
 }
 
 #button3 {
@@ -72,7 +79,7 @@ p {
     width: 250px;
     border-radius: 0 0 0 40px;
     top: 50%;
-    border: 10px solid black;
+    border: 5px solid black;
 }
 
 #button4 {
@@ -83,7 +90,7 @@ p {
     border-radius: 0 0 40px 0;
     top: 50%;
     left: 50%;
-    border: 10px solid black;
+    border: 5px solid black;
 }
 
 #innercircle {
@@ -94,7 +101,7 @@ p {
     width: 250px;
     position: relative;
     border-style: solid;
-    border-width: 10px;
+    border-width: 5px;
     margin: auto; 
     top: 25%;
 }

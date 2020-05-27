@@ -1,23 +1,23 @@
-// const red = document.querySelector('#button1');
-// const green = document.querySelector('#button2');
-// const yellow = document.querySelector('#button3');
-// const blue = document.querySelector('#button4');
+const red = document.querySelector('#button1');
+const green = document.querySelector('#button2');
+const yellow = document.querySelector('#button3');
+const blue = document.querySelector('#button4');
 
-// const sequence = [
-//     red, 
-//     green,
-//     yellow,
-//     blue
-// ];
+const sequence = [
+    red, 
+    green,
+    yellow,
+    blue
+];
 
-// const flash = button => {
-//     return new Promise((resolve, reject) => {
-//         button.className += ' active';
-//         setTimeout(() => {
+const flash = button => {
+    return new Promise((resolve, reject) => {
+        button.className += ' active';
+        setTimeout(() => {
 
-//         })
-//     })
-// }
+        })
+    })
+}
 
 
 // let order = [];
