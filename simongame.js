@@ -10,22 +10,22 @@ const sequence = [
     blue
 ];
 
-// const flash = (button) => {
+// const flash = (colorbutton) => {
 //     return new Promise((resolve, reject) => {
-//         button.className += 'active';
+//         colorbutton.className += 'active';
 //         setTimeout(() => {
-//             // outercircle.classList.remove('active')
-//         //  outercircle.className = outercircle.className.replace(
-//         //      ' active', ''
-//         //  );
+//             //outercircle.classList.remove('active')
+//             colorbutton.className = colorbutton.className.replace(
+//                 ' active', ''
+//             );
 //          resolve();
-//         }, 1000)
+//         }, 500)
 //     })
 // }
 
 // const game = async () => {
-//     for (const button of sequence) {
-//        await flash(button)
+//     for (const colorbutton of sequence) {
+//        await flash(colorbutton)
 //     }
 // }
 
