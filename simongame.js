@@ -3,33 +3,43 @@ const green = document.querySelector('.button2');
 const yellow = document.querySelector('.button3');
 const blue = document.querySelector('.button4');
 
+const randomColorButton = () => {
+    const colorbuttons = [
+        red, 
+        green, 
+        yellow,
+        blue
+    ];
+    return colorbuttons[parseInt(Math.random() * colorbuttons.length)];
+};
+
 const sequence = [
-    red, 
-    green,
-    yellow,
-    blue
+    randomColorButton(),
+    randomColorButton(),
+    randomColorButton(),
+    randomColorButton()
 ];
 
-// const flash = (colorbutton) => {
-//     return new Promise((resolve, reject) => {
-//         colorbutton.className += 'active';
-//         setTimeout(() => {
-//             //outercircle.classList.remove('active')
-//             colorbutton.className = colorbutton.className.replace(
-//                 ' active', ''
-//             );
-//          resolve();
-//         }, 500)
-//     })
-// }
+const flash = (colorbutton) => {
+    return new Promise((resolve, reject) => {
+        colorbutton.className += 'active';
+        setTimeout(() => {
+            //outercircle.classList.remove('active')
+            colorbutton.className = colorbutton.className.replace(
+                'active', ''
+            );
+         resolve();
+        }, 1000)
+    })
+}
 
-// const game = async () => {
-//     for (const colorbutton of sequence) {
-//        await flash(colorbutton)
-//     }
-// }
+const game = async () => {
+    for (const colorbutton of sequence) {
+       await flash(colorbutton)
+    }
+}
 
-// game();
+game();
 
 
 
