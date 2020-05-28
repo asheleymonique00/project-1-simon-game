@@ -1,7 +1,7 @@
-const red = document.querySelector('#button1');
-const green = document.querySelector('#button2');
-const yellow = document.querySelector('#button3');
-const blue = document.querySelector('#button4');
+const red = document.querySelector('.button1');
+const green = document.querySelector('.button2');
+const yellow = document.querySelector('.button3');
+const blue = document.querySelector('.button4');
 
 const sequence = [
     red, 
@@ -10,14 +10,50 @@ const sequence = [
     blue
 ];
 
-const flash = button => {
-    return new Promise((resolve, reject) => {
-        button.className += ' active';
-        setTimeout(() => {
+// const flash = (button) => {
+//     return new Promise((resolve, reject) => {
+//         button.className += 'active';
+//         setTimeout(() => {
+//             // outercircle.classList.remove('active')
+//         //  outercircle.className = outercircle.className.replace(
+//         //      ' active', ''
+//         //  );
+//          resolve();
+//         }, 1000)
+//     })
+// }
 
-        })
-    })
-}
+// const game = async () => {
+//     for (const button of sequence) {
+//        await flash(button)
+//     }
+// }
+
+// game();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // let order = [];
