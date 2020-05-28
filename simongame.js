@@ -2,6 +2,9 @@ const red = document.querySelector('.button1');
 const green = document.querySelector('.button2');
 const yellow = document.querySelector('.button3');
 const blue = document.querySelector('.button4');
+const startButton = document.querySelector('#start');
+const resetButton = document.querySelector('#reset');
+const scoreCounter = document.querySelector('#score');
 
 const randomColorButton = () => {
     const colorbuttons = [
@@ -19,14 +22,17 @@ const sequence = [
     randomColorButton(),
     randomColorButton()
 ];
+console.log(sequence);
 
 const flash = (colorbutton) => {
     return new Promise((resolve, reject) => {
-        colorbutton.className += 'active';
+        setTimeout(() => {
+            colorbutton.className += ' active';
+        }, 500);        
         setTimeout(() => {
             //outercircle.classList.remove('active')
             colorbutton.className = colorbutton.className.replace(
-                'active', ''
+                ' active', ''
             );
          resolve();
         }, 1000)
@@ -39,8 +45,10 @@ const game = async () => {
     }
 }
 
-game();
-
+startButton.addEventListener('click', game);
+resetButton.addEventListener('click', ()=> {
+    location.reload()
+});
 
 
 
