@@ -40,18 +40,19 @@ p {
     border: 25px solid black;
     /* border-width: 5px; */
     margin: auto;
-    cursor: pointer;     
+       
 } 
 
 .colorbutton {
     height: 245px;
     width: 245px;
     display: inline-block;
+    cursor: pointer;  
 }
 
 /*fix later to change the color of flash*/
 .colorbutton:hover {
-    box-shadow: inset 15px black;
+    box-shadow: inset 0px 0px 0px 3px cyan;
     box-sizing: border-box;
 }
 
