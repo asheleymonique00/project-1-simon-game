@@ -31,13 +31,13 @@ p {
 }
 
 #outercircle {
-    /* background: black; */
+    background: black;
     /* border-width: thick; */
-    /* border-radius: 50px; */
+    border-radius: 50px;
     height: 500px;
     width: 500px;
     position: relative;
-    /* border: 10px solid black; */
+    border: 25px solid black;
     /* border-width: 5px; */
     margin: auto;
     cursor: pointer;     
@@ -100,7 +100,7 @@ p {
     /*border: 5px solid black;*/
 }
 
-/* #innercircle {
+#innercircle {
     background: #aaa9ad;
     text-align: center;
     border-radius: 50%;
@@ -111,7 +111,7 @@ p {
     border-width: 5px;
     margin: auto; 
     top: 25%;
-} */
+}
 
 #simon {
     margin: 40px;
