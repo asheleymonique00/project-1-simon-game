@@ -4,6 +4,7 @@ const yellow = document.querySelector('.button3');
 const blue = document.querySelector('.button4');
 const startButton = document.querySelector('#start');
 const resetButton = document.querySelector('#reset');
+const quitButton = document.querySelector('#quit');
 let score  = 0;
 const scoreCounter = document.querySelector('#score');
 
@@ -52,12 +53,14 @@ const colorButtonClicked = colorButtonClicked => {
         //score
         const scoreCounter = document.getElementById('score');
         scoreCounter.innerText = "Score: " + score;
+        //noise
+
         game();        
         }
     } else {
         //end game
-        alert('game over');
-    }
+        alert('You Loss! Game Over');
+    } 
 }; 
 
 const game = async () => {
@@ -73,7 +76,7 @@ startButton.addEventListener('click', game);
 resetButton.addEventListener('click', ()=> {
     location.reload()
 });
+// quitButton = document.getElementById('quit').addEventListener('click', 
+// function () {
 
-// function scoreCounter(){
-//     for (let i = 0; i < 25; i++)
 // }

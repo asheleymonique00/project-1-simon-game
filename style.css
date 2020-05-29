@@ -108,16 +108,18 @@ p {
 #start {
     border-radius: 50%;
     background: oldlace;
+    margin: 5px;
 
 }
 
 #reset {
     border-radius: 50%;
     background: oldlace;
+    margin: 5px;
 }
 
-#quit {
+/* #quit {
     border-radius: 50%;
     background: oldlace;
-}
-
+    margin: 5px;
+} */
