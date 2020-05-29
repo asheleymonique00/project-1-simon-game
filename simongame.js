@@ -7,6 +7,7 @@ const resetButton = document.querySelector('#reset');
 const quitButton = document.querySelector('#quit');
 let score  = 0;
 const scoreCounter = document.querySelector('#score');
+let noise =  true;
 
 const randomColorButton = () => {
     const colorbuttons = [
@@ -44,6 +45,12 @@ let canClick = false;
 const colorButtonClicked = colorButtonClicked => {
     if (!canClick) return;
     const expectedColorButton = sequenceToGuess.shift();
+    //noise
+    if (noise) {
+        let audio = document.getElementById('clip1');
+        audio.play();
+    }
+    noise = true;
     if (expectedColorButton === colorButtonClicked) {
         if (sequenceToGuess.length === 0) {
         //start new round
@@ -53,8 +60,6 @@ const colorButtonClicked = colorButtonClicked => {
         //score
         const scoreCounter = document.getElementById('score');
         scoreCounter.innerText = "Score: " + score;
-        //noise
-
         game();        
         }
     } else {
