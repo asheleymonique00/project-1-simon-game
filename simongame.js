@@ -4,6 +4,7 @@ const yellow = document.querySelector('.button3');
 const blue = document.querySelector('.button4');
 const startButton = document.querySelector('#start');
 const resetButton = document.querySelector('#reset');
+let score  = 0;
 const scoreCounter = document.querySelector('#score');
 
 const randomColorButton = () => {
@@ -18,9 +19,6 @@ const randomColorButton = () => {
 
 const sequence = [
     randomColorButton()
-    // randomColorButton(),
-    // randomColorButton(),
-    // randomColorButton()
 ];
 let sequenceToGuess = [...sequence];
 
@@ -50,7 +48,11 @@ const colorButtonClicked = colorButtonClicked => {
         //start new round
         sequence.push(randomColorButton());
         sequenceToGuess = [...sequence];
-        game();
+        score++;
+        //score
+        const scoreCounter = document.getElementById('score');
+        scoreCounter.innerText = "Score: " + score;
+        game();        
         }
     } else {
         //end game
@@ -67,17 +69,11 @@ const game = async () => {
  };
 
 
-// const game = async () => {
-//     sartFlashing();
-//     for (const colorbutton of sequence) {
-//        await flash(colorbutton);
-//     }
-
-//     canClick = true;
-// }
-
 startButton.addEventListener('click', game);
 resetButton.addEventListener('click', ()=> {
     location.reload()
 });
 
+// function scoreCounter(){
+//     for (let i = 0; i < 25; i++)
+// }
