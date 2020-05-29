@@ -16,10 +16,15 @@ const randomColorButton = () => {
     return colorbuttons[parseInt(Math.random() * colorbuttons.length)];
 };
 
-const sequence = [randomColorButton()];
+const sequence = [
+    randomColorButton()
+    // randomColorButton(),
+    // randomColorButton(),
+    // randomColorButton()
+];
 let sequenceToGuess = [...sequence];
 
-const flash = (colorbutton) => {
+const flash = colorbutton => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             colorbutton.className += ' active';
@@ -28,34 +33,48 @@ const flash = (colorbutton) => {
             colorbutton.className = colorbutton.className.replace(
                 ' active', ''
             );
-         resolve();
+            setTimeout(() => {
+               resolve();
+            }, 250);         
         }, 1000)
-    })
-}
+    });
+};
 
 let canClick = false;
 
-        const colorbuttonClicked = colorbutton => {
-            if (!canClick) return;
-            console.log(colorbutton);
-            const expectedColorButton = sequenceToGuess.shift();
-            if (expectedColorButton === colorbuttonClicked) {
-               if (sequenceToGuess.length === 0) {
-                //start new round
-               }
-            } else {
-                //end game
-                alert('game over');
-            }
-        }; 
+const colorButtonClicked = colorButtonClicked => {
+    if (!canClick) return;
+    const expectedColorButton = sequenceToGuess.shift();
+    if (expectedColorButton === colorButtonClicked) {
+        if (sequenceToGuess.length === 0) {
+        //start new round
+        sequence.push(randomColorButton());
+        sequenceToGuess = [...sequence];
+        game();
+        }
+    } else {
+        //end game
+        alert('game over');
+    }
+}; 
 
 const game = async () => {
+    canClick = false;
     for (const colorbutton of sequence) {
-       await flash(colorbutton);
-    }
+        await flash(colorbutton);
+     } 
+     canClick = true;
+ };
 
-    canClick = true;
-}
+
+// const game = async () => {
+//     sartFlashing();
+//     for (const colorbutton of sequence) {
+//        await flash(colorbutton);
+//     }
+
+//     canClick = true;
+// }
 
 startButton.addEventListener('click', game);
 resetButton.addEventListener('click', ()=> {
